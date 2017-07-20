@@ -7,7 +7,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
 
-const GetAge = require('./getAge')
+const CustomerAge = require('./getAge')
 
 const port = 7515      // set our port
 
@@ -20,7 +20,7 @@ app.post('/calculate-age', function (req, res) {
     if (age.length == 0) {
      res.send({success: false, message: 'birthday is empty'})
     } else {
-     let data = GetAge.age(age)
+     let data = CustomerAge.getAge(age)
      res.send({success: true, age: JSON.stringify(data)})
     } 
   }
@@ -28,9 +28,9 @@ app.post('/calculate-age', function (req, res) {
 })
 
 process.argv.slice(2).map(function (y, i) {
-  y = y.split('=')
-  if (y[0] === '--birthday') {
-    let age = GetAge.age(y[1])
+  birthDay = y.split('=')
+  if (birthDay[0] === '--birthday') {
+    let age = CustomerAge.getAge(birthDay[1])
     if (age == 'fail') {
       console.log('format birthday yyyy/m/d')
     } else {

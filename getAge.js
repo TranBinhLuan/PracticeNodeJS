@@ -1,5 +1,5 @@
-class GetAge {
-  age (age) {
+class CustomerAge {
+  getAge (age) {
     let countDownDate = new Date(age)
     countDownDate = countDownDate.getFullYear()
 
@@ -14,4 +14,4 @@ class GetAge {
     }
   }
 }
-module.exports = new GetAge()
+module.exports = new CustomerAge()
