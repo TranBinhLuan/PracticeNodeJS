@@ -1,14 +1,19 @@
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
-// create application/json parser
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
+
+// parse application/json
+app.use(bodyParser.json())
 
 const GetAge = require('./getAge')
 
-const port = process.env.PORT       // set our port
+const port = 7515      // set our port
 
 app.post('/calculate-age', function (req, res) {
   let age = req.body.birthday
+    console.log(age)
   if (age == 'fail') {
     res.send({success: false, message: 'format birthday yyyy/m/d'})
   } else {
