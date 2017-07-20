@@ -1,0 +1,35 @@
+{
+  "name": "trainning-nodejs",
+  "devDependencies": {
+    "standard": "*"
+  },
+  "scripts": {
+    "test": "test script js"
+  },
+  "version": "8.1.3",
+  "private": true,
+  "description": "trainning-nodejs",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "jade": "~1.11.0",
+    "morgan": "~1.8.1",
+    "serve-favicon": "~2.4.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TranBinhLuan/PracticeNodeJS.git"
+  },
+  "keywords": [
+    "trainning"
+  ],
+  "author": "luantran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TranBinhLuan/PracticeNodeJS/issues"
+  },
+  "homepage": "https://github.com/TranBinhLuan/PracticeNodeJS#readme"
+}
