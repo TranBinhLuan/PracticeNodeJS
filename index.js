@@ -12,15 +12,15 @@ const CustomerAge = require('./getAge')
 const port = 7515      // set our port
 
 app.post('/calculate-age', function (req, res) {
-  let age = req.body.birthday
-    console.log(age)
-  if (age == 'fail') {
+  let birthday = req.body.birthday
+    console.log(birthday)
+  if (birthday == 'fail') {
     res.send({success: false, message: 'format birthday yyyy/m/d'})
   } else {
-    if (age.length == 0) {
+    if (birthday.length == 0) {
      res.send({success: false, message: 'birthday is empty'})
     } else {
-     let data = CustomerAge.getAge(age)
+     let data = CustomerAge.getAge(birthday)
      res.send({success: true, age: JSON.stringify(data)})
     } 
   }
