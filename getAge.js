@@ -1,11 +1,11 @@
-class getAge {
-    age(age) {
-        let countDownDate = new Date(age).getFullYear();
-        // Get todays date and time
-        let now = new Date().getFullYear();
-        let year = Math.floor(now - countDownDate);
-
-        return year;
-    }
+class GetAge {
+  age (age) {
+    let countDownDate = new Date(age).getFullYear()
+    // Get todays date and time
+    let now = new Date().getFullYear()
+    let year = Math.floor(now - countDownDate)
+    console.log(countDownDate)
+    return year
+  }
 }
-module.exports = new getAge()
+module.exports = new GetAge()
