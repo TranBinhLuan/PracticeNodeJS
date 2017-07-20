@@ -10,7 +10,7 @@ const port = process.env.PORT       // set our port
 app.post('/calculate-age', function (req, res) {
   let age = req.body.birthday
   if (age == 'fail') {
-    console.log('format birthday yyyy/m/d')
+    res.send({success: false, message: 'format birthday yyyy/m/d'})
   } else {
     if (age.length == 0) {
      res.send({success: false, message: 'birthday is empty'})
