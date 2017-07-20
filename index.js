@@ -10,7 +10,7 @@ const port = process.env.PORT       // set our port
 app.post('/calculate-age', function (req, res) {
     let age = req.body.birthday
     if (age.length === 0) {
-        res.send({success : false, message: "age is empty"})
+        res.send({success : false, message: "birthday is empty"})
     } else {
         let data = getAge.age(age)
         res.send({success : true, age: JSON.stringify(data)})
